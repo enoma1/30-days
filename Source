@@ -1,0 +1,49 @@
+#include<stdio.h>
+
+int main()
+{
+    int mth1,mth2,d1,d2,total,mth,days;
+    printf("Pls note that the month should be inputed as\n their corresponding numbers as listed below\n");
+    printf("jan = 1\n");
+    printf("feb = 2\n");
+    printf("mar = 3\n");
+    printf("apr = 4\n");
+    printf("may = 5\n");
+    printf("jun = 6\n");
+    printf("jul = 7\n");
+    printf("aug = 8\n");
+    printf("sep = 9\n");
+    printf("oct = 10\n");
+    printf("nov = 11\n");
+    printf("dec = 12\n");
+        
+    printf("enter month of first date\n");
+    scanf("%d",&mth1);
+    
+    printf("enter day of first date\n");
+    scanf("%d",&d1);
+    
+    printf("enter month of second date\n");
+    scanf("%d",&mth2);
+    
+    printf("enter day of second date\n");
+    scanf("%d",&d2);
+    if (mth2 - mth1 - 1 >= 0)
+    {
+        total = ((mth2 - mth1 - 1)* 30) + d2 + (30 - d1);
+   }
+    else
+    {
+        days = d2 - d1;
+    }
+    
+    mth = total/30;
+     while(total > 30)
+    {
+        days = total - 30;
+        total = total - 30;
+    }
+        
+    printf("total number of months and days in between is\n");
+    printf("%d months and %d days",mth,days);
+}
